@@ -7,13 +7,13 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/maxScale: "1"
+        autoscaling.knative.dev/maxScale: "3"
     spec:
       containers:
         - image: code4romania/sprijin-de-urgenta-api:v1.0
           resources:
             limits:
-              cpu: 300m
+              cpu: 500m
               memory: 1Gi
           ports:
             - containerPort: 8070
@@ -103,8 +103,13 @@ spec:
                 secretKeyRef:
                   name: sprijin-de-urgenta-secret
                   key: email_host_user
-            - name: EMAIL_HOST_PASSWORD
+            - name: REDIS_HOST
               valueFrom:
                 secretKeyRef:
                   name: sprijin-de-urgenta-secret
-                  key: email_host_password
+                  key: redis_host
+            - name: REDIS_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: sprijin-de-urgenta-secret
+                  key: redis_port
