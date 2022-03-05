@@ -88,6 +88,8 @@ spec:
               value: "yes"
             - name: EMAIL_USE_SSL
               value: "no"
+            - name: FROM_EMAIL
+              value: "noreply@sprijindeurgenta.ro"
             - name: EMAIL_HOST
               valueFrom:
                 secretKeyRef:
