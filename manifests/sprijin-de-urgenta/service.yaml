@@ -10,7 +10,7 @@ spec:
         autoscaling.knative.dev/maxScale: "3"
     spec:
       containers:
-        - image: code4romania/sprijin-de-urgenta-api:v1.0
+        - image: code4romania/sprijin-de-urgenta-api:v1.1
           resources:
             limits:
               cpu: 500m
@@ -33,8 +33,8 @@ spec:
               value: "yes"
             - name: RUN_COMPILEMESSAGES
               value: "yes"
-            - name: RUN_LOAD_DUMMY_DATA
-              value: "no"
+            - name: RUN_SEED_DATA
+              value: "yes"
             - name: RUN_COLLECT_STATIC
               value: "yes"
             - name: RUN_DEV_SERVER
