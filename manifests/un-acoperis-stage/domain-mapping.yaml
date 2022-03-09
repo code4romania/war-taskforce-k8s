@@ -1,0 +1,10 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: DomainMapping
+metadata:
+  name: stage.unacoperis.ro
+  namespace: un-acoperis-stage
+spec:
+  ref:
+    name: un-acoperis-stage
+    kind: Service
+    apiVersion: serving.knative.dev/v1
