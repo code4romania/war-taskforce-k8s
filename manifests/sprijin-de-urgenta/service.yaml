@@ -7,7 +7,8 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/maxScale: "3"
+        autoscaling.knative.dev/max-Scale: "3"
+        autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
         - image: code4romania/sprijin-de-urgenta-api:v1.4
