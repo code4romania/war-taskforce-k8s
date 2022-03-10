@@ -14,7 +14,7 @@ spec:
         - image: utwo/war-acoperis:latest
           resources:
             limits:
-              cpu: 500m
+              cpu: 250m
               memory: 1Gi
           command: ["/bin/sh"]
           args:
@@ -22,8 +22,11 @@ spec:
             - >-
               php artisan config:cache &&
               php artisan view:cache &&
-              php artisan migrate --seed --force &&
               exec /usr/sbin/apache2ctl -D FOREGROUND
+          lifecycle:
+            postStart:
+              exec:
+                command: ["php", "artisan", "migrate --seed --force"]
           ports:
             - containerPort: 8080
           env:
