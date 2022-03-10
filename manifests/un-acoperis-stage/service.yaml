@@ -22,6 +22,7 @@ spec:
             - >-
               php artisan config:cache &&
               php artisan view:cache &&
+              php artisan migrate --force &&
               exec /usr/sbin/apache2ctl -D FOREGROUND
           ports:
             - containerPort: 8080
