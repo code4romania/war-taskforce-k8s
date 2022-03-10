@@ -14,7 +14,7 @@ spec:
         - image: code4romania/sprijin-de-urgenta-api:v1.4
           resources:
             limits:
-              cpu: 600m
+              cpu: 500m
               memory: 2Gi
           ports:
             - containerPort: 8070
