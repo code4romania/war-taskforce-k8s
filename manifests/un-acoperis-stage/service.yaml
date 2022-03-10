@@ -14,7 +14,7 @@ spec:
         - image: utwo/war-acoperis:v1.1
           resources:
             limits:
-              cpu: 150m
+              cpu: 160m
               memory: 1Gi
           command: ["/bin/sh"]
           args:
