@@ -58,7 +58,7 @@ spec:
               value: smtp
             - name: MAIL_HOST
               value: email-smtp.eu-west-1.amazonaws.com
-            - name: MAIL_HOST
+            - name: MAIL_PORT
               value: "587"
             - name: MAIL_ENCRYPTION
               value: tls
