@@ -8,10 +8,10 @@ spec:
     metadata:
       annotations:
         autoscaling.knative.dev/max-scale: "2"
-        autoscaling.knative.dev/min-scale: "1"
+        autoscaling.knative.dev/min-scale: "0"
     spec:
       containers:
-        - image: utwo/war-acoperis:latest
+        - image: utwo/war-acoperis:v1.1
           resources:
             limits:
               cpu: 150m
@@ -23,10 +23,6 @@ spec:
               php artisan config:cache &&
               php artisan view:cache &&
               exec /usr/sbin/apache2ctl -D FOREGROUND
-          lifecycle:
-            postStart:
-              exec:
-                command: ["php", "artisan", "migrate --seed --force"]
           ports:
             - containerPort: 8080
           env:
