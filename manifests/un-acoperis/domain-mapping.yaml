@@ -1,7 +1,7 @@
 apiVersion: serving.knative.dev/v1alpha1
 kind: DomainMapping
 metadata:
-  name: unacoperis.ro
+  name: prod.unacoperis.ro
   namespace: un-acoperis
 spec:
   ref:

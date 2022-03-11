@@ -14,7 +14,7 @@ spec:
         - image: utwo/war-acoperis:v1.2
           resources:
             limits:
-              cpu: 150m
+              cpu: 200m
               memory: 2Gi
           command: ["/bin/sh"]
           args:
@@ -141,3 +141,8 @@ spec:
                 secretKeyRef:
                   name: un-acoperis-secret
                   key: nocaptcha_sitekey
+            - name: SENTRY_LARAVEL_DSN
+              valueFrom:
+                secretKeyRef:
+                  name: un-acoperis-secret
+                  key: sentry_laravel
