@@ -11,7 +11,7 @@ spec:
         autoscaling.knative.dev/min-scale: "0"
     spec:
       containers:
-        - image: utwo/war-acoperis:v1.1
+        - image: utwo/war-acoperis:v1.2
           resources:
             limits:
               cpu: 150m
