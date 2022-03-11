@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/max-scale: "4"
+        autoscaling.knative.dev/max-scale: "8"
         autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
@@ -33,6 +33,10 @@ spec:
               value: production
             - name: APP_DEBUG
               value: "false"
+            - name: ADMIN_APP_URL
+              value: unacoperis.ro/cms
+            - name: ADMIN_APP_PATH
+              value: /
             - name: APP_URL
               value: "http://unacoperis.ro"
             - name: LOG_CHANNEL

@@ -33,6 +33,10 @@ spec:
               value: local
             - name: APP_DEBUG
               value: "true"
+            - name: ADMIN_APP_URL
+              value: stage.unacoperis.ro/cms
+            - name: ADMIN_APP_PATH
+              value: /
             - name: APP_URL
               value: "http://stage.unacoperis.ro"
             - name: LOG_CHANNEL
@@ -59,10 +63,12 @@ spec:
               value: tls
             - name: MAIL_FROM_NAME
               value: "Un Acoperiș"
+            - name: MAIL_TO_CONTACT_ADDRESS
+              value: admin@unacoperis.ro
             - name: MAIL_TO_HELP_ADDRESS
-              value: noreply@unacoperis.ro
+              value: admin@unacoperis.ro
             - name: MAIL_FROM_ADDRESS
-              value: noreply@unacoperis.ro
+              value: admin@unacoperis.ro
             - name: AWS_DEFAULT_REGION
               value: eu-west-1
             - name: SCOUT_DRIVER

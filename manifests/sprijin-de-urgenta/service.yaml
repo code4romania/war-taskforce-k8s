@@ -7,7 +7,7 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/max-scale: "3"
+        autoscaling.knative.dev/max-scale: "8"
         autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
@@ -110,7 +110,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: sprijin-de-urgenta-secret
-                  key: email_host_password 
+                  key: email_host_password
             - name: REDIS_HOST
               valueFrom:
                 secretKeyRef:
