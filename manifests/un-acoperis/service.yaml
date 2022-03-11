@@ -64,9 +64,9 @@ spec:
             - name: MAIL_FROM_NAME
               value: "Un Acoperiș"
             - name: MAIL_TO_CONTACT_ADDRESS
-              value: admin@unacoperis.ro
+              value: dopomoha@code4.ro
             - name: MAIL_TO_HELP_ADDRESS
-              value: admin@unacoperis.ro
+              value: dopomoha@code4.ro
             - name: MAIL_FROM_ADDRESS
               value: admin@unacoperis.ro
             - name: AWS_DEFAULT_REGION
