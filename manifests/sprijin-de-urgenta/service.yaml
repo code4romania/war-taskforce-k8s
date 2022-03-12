@@ -11,7 +11,7 @@ spec:
         autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
-        - image: code4romania/sprijin-de-urgenta-api:v1.9
+        - image: code4romania/sprijin-de-urgenta-api:v1.10
           resources:
             limits:
               cpu: 500m
