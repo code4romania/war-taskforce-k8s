@@ -43,7 +43,7 @@ spec:
             - name: DJANGO_SETTINGS_MODULE
               value: "oncoped_site.settings.production"
             - name: ALLOWED_HOSTS
-              value: "*.ukrainechildcancerhelp.ro"
+              value: ".ukrainechildcancerhelp.ro"
             - name: DATABASE_USER
               valueFrom:
                 secretKeyRef:
