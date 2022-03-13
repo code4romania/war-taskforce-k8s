@@ -128,5 +128,5 @@ spec:
             - name: SLACK_WEBHOOK_URL
               valueFrom:
                 secretKeyRef:
-                  name: sprijin-de-urgenta-secret
+                  name: oncologie-pediatrica-secret
                   key: slack_webhook_url
