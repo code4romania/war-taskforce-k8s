@@ -11,7 +11,7 @@ spec:
         autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
-        - image: code4romania/oncologie-pediatrica:v1.3
+        - image: code4romania/oncologie-pediatrica:v1.4
           resources:
             limits:
               cpu: 300m
@@ -121,3 +121,12 @@ spec:
                 secretKeyRef:
                   name: oncologie-pediatrica-secret
                   key: redis_port
+            - name: ENABLE_SLACK_LOGGING
+              value: "yes"
+            - name: SLACK_LOGGING_COLOR
+              value: "1D49A7"
+            - name: SLACK_WEBHOOK_URL
+              valueFrom:
+                secretKeyRef:
+                  name: sprijin-de-urgenta-secret
+                  key: slack_webhook_url
