@@ -54,7 +54,10 @@ spec:
             - name: SESSION_DRIVER
               value: database
             - name: SESSION_LIFETIME
-              value: "120"
+              valueFrom:
+                secretKeyRef:
+                  name: un-acoperis-secret
+                  key: session_lifetime
             - name: MAIL_MAILER
               value: smtp
             - name: MAIL_PORT
