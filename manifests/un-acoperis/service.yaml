@@ -14,7 +14,7 @@ spec:
         - image: code4romania/un-acoperis:v1.7
           resources:
             limits:
-              cpu: 200m
+              cpu: 300m
               memory: 2Gi
           command: ["/bin/sh"]
           args:
