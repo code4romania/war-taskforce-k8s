@@ -130,3 +130,13 @@ spec:
                 secretKeyRef:
                   name: oncologie-pediatrica-secret
                   key: slack_webhook_url
+            - name: RECAPTCHA_PUBLIC_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: oncologie-pediatrica-secret
+                  key: recapcha_public_key
+            - name: RECAPTCHA_PRIVATE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: oncologie-pediatrica-secret
+                  key: recapcha_private_key
