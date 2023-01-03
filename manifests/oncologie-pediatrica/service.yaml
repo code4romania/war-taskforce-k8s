@@ -7,11 +7,11 @@ spec:
   template:
     metadata:
       annotations:
-        autoscaling.knative.dev/max-scale: "7"
+        autoscaling.knative.dev/max-scale: "3"
         autoscaling.knative.dev/min-scale: "1"
     spec:
       containers:
-        - image: code4romania/oncologie-pediatrica:v1.6
+        - image: code4romania/oncologie-pediatrica:1.6.1
           resources:
             limits:
               cpu: 300m
@@ -111,16 +111,6 @@ spec:
                 secretKeyRef:
                   name: oncologie-pediatrica-secret
                   key: email_host_password
-            - name: REDIS_HOST
-              valueFrom:
-                secretKeyRef:
-                  name: oncologie-pediatrica-secret
-                  key: redis_host
-            - name: REDIS_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: oncologie-pediatrica-secret
-                  key: redis_port
             - name: ENABLE_SLACK_LOGGING
               value: "yes"
             - name: SLACK_LOGGING_COLOR
