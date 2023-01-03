@@ -111,16 +111,6 @@ spec:
                 secretKeyRef:
                   name: sens-pozitiv-secret
                   key: email_host_password
-            - name: REDIS_HOST
-              valueFrom:
-                secretKeyRef:
-                  name: sens-pozitiv-secret
-                  key: redis_host
-            - name: REDIS_PORT
-              valueFrom:
-                secretKeyRef:
-                  name: sens-pozitiv-secret
-                  key: redis_port
             - name: ENABLE_SLACK_LOGGING
               value: "yes"
             - name: SLACK_LOGGING_COLOR
